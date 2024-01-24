@@ -1,0 +1,43 @@
+.flex {
+    display: flex;
+}
+
+.justify_center {
+    justify-content: center;
+}
+
+.align_center {
+    align-items: center;
+}
+.p-10{
+    padding: 10px;
+}
+.round{
+    border-radius: 10px;
+}
+.column{
+    flex-direction: column;
+    gap: 20px;
+}
+.gap{
+    gap:5px;
+}
+.row{
+    flex-direction: row;
+    gap: 20px;
+}
+.f-20{
+    font-size: larger;
+}
+.circle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #242424;
+    height: 30px;
+    width: 30px;
+    border-radius: 20px;
+}
+.f-20{
+    font-size: 20px;
+}

@@ -1,0 +1,178 @@
+@media (max-width: 1200px) {
+    .left {
+        position: absolute;
+        width: 400px;
+        height: fit-content;
+        padding: 0 10px 10px 0;
+        transition: all 0.5s ease-out;
+        left: -100%;
+        background-color: black;
+        border: 10px;
+        z-index: 3;
+    }
+
+    .library {
+        height: 69.5vh;
+    }
+
+    .CardContainer {
+        z-index: 1;
+    }
+
+    .right {
+        width: 100dvw;
+        height: 80dvh;
+        z-index: 0;
+    }
+
+    .circle {
+        display: none;
+    }
+
+    #menu {
+        display: block;
+    }
+
+    #cancel {
+        display: block;
+        position: absolute;
+        top: 3px;
+        right: 14px;
+        scale: 1.2;
+        filter: invert(0.5);
+    }
+}
+
+@media (max-width: 700px) {
+    .volume {
+        display: none;
+    }
+}
+
+@media (max-width: 550px) {
+    body {
+        padding: 0;
+    }
+
+    .left {
+        position: absolute;
+        justify-content: space-between;
+        width: 95vw;
+        height: fit-content;
+        padding: 0 10px 0 0;
+        transition: all 0.5s ease-out;
+        left: -100%;
+        background-color: black;
+        border: 10px;
+        z-index: 1;
+    }
+
+    #SongList>ul {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        height: 47dvh;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+
+    .library {
+        height: fit-content;
+    }
+
+    .right {
+        width: 90dvw;
+        height: 80dvh;
+        z-index: 0;
+    }
+
+    .SpotifyPlaylist {
+        overflow-y: hidden;
+    }
+
+    .CardContainer {
+        height: 69dvh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        row-gap: 10px;
+        flex-wrap: nowrap;
+        overflow-y: scroll;
+        max-height: none;
+    }
+
+    .card1 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 85dvw;
+        height: fit-content;
+    }
+
+    .circle {
+        display: none;
+    }
+
+    #menu {
+        display: block;
+    }
+
+    #cancel {
+        display: block;
+        position: absolute;
+        top: 3px;
+        right: 14px;
+        scale: 1.2;
+        filter: invert(0.5);
+    }
+
+    .card1 p {
+        font-size: 14px;
+        height: 33px;
+        width: auto;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .imgplay {
+        position: relative;
+    }
+
+    .image {
+        height: 40vw;
+        width: 40vw;
+        border-radius: 12px;
+    }
+
+    p {
+        color: rgba(240, 248, 255, 0.34);
+    }
+
+    ::-webkit-scrollbar {
+        width: 0px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: transparent;
+        border-radius: 6px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+
+    .play {
+        display: none;
+    }
+
+    .oneline {
+        position: fixed;
+        right: 30%;
+        bottom: 6dvh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+    }
+}

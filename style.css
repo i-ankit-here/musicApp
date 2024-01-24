@@ -1,0 +1,377 @@
+@import url('https://fonts.googleapis.com/css2?family=Freehand&family=Roboto+Flex:opsz,wght@8..144,500;8..144,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crete+Round&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: 'Crete Round', serif;
+    font-family: 'Roboto Flex', sans-serif;
+}
+
+body {
+    padding: 10px;
+}
+
+.left {
+    width: 25vw;
+    margin: 7px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.right {
+    width: 75vw;
+    margin: 7px;
+
+}
+
+body {
+    background-color: black;
+}
+
+.bg-grey {
+    background-color: #121212;
+}
+
+ul li {
+    list-style: none;
+    height: 60px;
+
+}
+
+img.invert {
+    filter: invert(1);
+    width: 45px;
+    height: 60px;
+    padding-top: 19px;
+    padding-left: 10px;
+}
+
+.library {
+    position: relative;
+    height: 60dvh;
+    padding: 10px;
+}
+
+.song>img {
+    height: 40px;
+    width: 40px;
+}
+
+.song {
+    display: flex;
+    align-items: center;
+}
+
+#SongList>ul {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    height: 36dvh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+#SongList>ul>li {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    height: fit-content;
+    font-size: 1rem;
+    list-style: none;
+    padding: 10px;
+    background-color: #121212;
+    border-radius: 12px;
+}
+
+.play1 {
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    background-color: #1ed760;
+    z-index: -1;
+    opacity: 0;
+}
+
+.ply:hover+.play1 {
+    opacity: 1;
+    transition: all 0.5s ease-out;
+    z-index: 1;
+}
+
+.song:hover+.ply>.play1 {
+    opacity: 1;
+    transition: all 0.5s ease-out;
+    z-index: 1;
+}
+
+.play1:hover {
+    opacity: 1;
+    scale: 1.1;
+    transition: all 0.1s ease-out;
+    z-index: 1;
+}
+
+.playlist {
+    position: absolute;
+    right: 0;
+    top: 0
+}
+
+#p_l {
+    filter: invert(1);
+    width: 30px;
+    height: 40px;
+    padding-top: 25px;
+    padding-left: 10px;
+}
+
+.bglib {
+    background-color: #242424;
+}
+
+#button1 {
+    height: 40px;
+    width: 80px;
+    background: #242424;
+    border: none;
+    border-radius: 20px;
+}
+
+#button2 {
+    height: 40px;
+    width: 80px;
+    background: rgb(255, 255, 255);
+    color: black;
+    border: none;
+    border-radius: 20px;
+}
+
+.controls {
+    display: flex;
+    gap: 5px;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card1 {
+    width: 12dvw;
+    padding: 10px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card1 p {
+    font-size: 14px;
+    height: 33px;
+    width: auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.imgplay {
+    position: relative;
+}
+
+.image {
+    width: 12vw;
+    height: 12vw;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 12px;
+}
+
+p {
+    color: rgba(240, 248, 255, 0.34);
+}
+
+.CardContainer {
+    display: flex;
+    justify-content: start;
+    column-gap: 10px;
+    row-gap: 10px;
+    flex-wrap: wrap;
+    max-height: 66dvh;
+    overflow-y: scroll;
+}
+
+.play {
+    position: absolute;
+    bottom: 0vh;
+    right: 2vh;
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    background-color: #1ed760;
+    z-index: -1;
+    opacity: 0;
+}
+
+.image:hover+.play {
+    position: absolute;
+    bottom: 2vh;
+    opacity: 1;
+    transition: all 0.4s ease-out;
+    z-index: 1;
+}
+
+.play:hover {
+    position: absolute;
+    bottom: 2vh;
+    opacity: 1;
+    scale: 1.2;
+    z-index: 1;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(48, 47, 47, 0.873);
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgb(36, 33, 33);
+}
+.circlebar {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+}
+
+.playbtn {
+    cursor: pointer;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pausebtn {
+    cursor: pointer;
+    position: absolute;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.SongInfo {
+    position: fixed;
+    color: white;
+    left: 6vw;
+    width: 20vw;
+}
+
+.SongTime {
+    position: fixed;
+    display: flex;
+    justify-content: end;
+    color: white;
+    right: 5vw;
+    width: 20vw;
+}
+
+.oneline {
+    position: fixed;
+    right: 45%;
+    bottom: 6dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.circlebar:hover {
+    scale: 1.2;
+}
+
+.next:hover>* {
+    cursor: pointer;
+    scale: 1.2;
+}
+
+.prev:hover>* {
+    cursor: pointer;
+    scale: 1.2;
+}
+
+.seekbar {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    right: 5%;
+    bottom: 3dvh;
+    width: 90%;
+    height: 4px;
+    background-color: rgba(255, 255, 255, 0.407);
+    cursor: pointer;
+}
+
+.seekbar:hover {
+    background-color: white;
+}
+
+.crcl {
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    transition: left 0.5s ease-out;
+}
+
+.crcl:hover {
+    scale: 1.2;
+}
+
+#menu,
+#cancel {
+    display: none;
+}
+
+.volume {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 36%;
+
+}
+
+#vol {
+    height: 30px;
+    width: 30px;
+    position: absolute;
+}
+
+#vol_mute {
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    display: none;
+}
+
+#vol_control {
+    position: absolute;
+    left: 20px;
+    height: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    accent-color: white;
+    
+}
