@@ -1,7 +1,7 @@
 async function spotify() {
     //fetching albums
     async function album() {
-        let res = await fetch("http://127.0.0.1:3000/songs/")
+        let res = await fetch("/songs/")
         let res1 = await res.text()
         let div = document.createElement("div");
         div.innerHTML = res1;
@@ -9,7 +9,7 @@ async function spotify() {
         Array.from(div.getElementsByTagName("a")).forEach(async element => {
             if (element.href.includes("/songs/")) {
                 albums.push(element.innerText.slice(0, (element.innerText.length - 1)))
-                let res = await fetch(`http://127.0.0.1:3000/songs/${element.innerText.slice(0, (element.innerText.length - 1))}/info.json`)
+                let res = await fetch(`/songs/${element.innerText.slice(0, (element.innerText.length - 1))}/info.json`)
                 let res1 = await res.json()
                 document.querySelector(".CardContainer").innerHTML += ` <div data-folder="${element.innerText.slice(0, (element.innerText.length - 1))}" class="card1" style="background-color: rgb(33, 31, 31);">
             <div class="imgplay">
@@ -45,7 +45,7 @@ async function spotify() {
     }
 
     async function main(folder) {
-        let response1 = await fetch(`http://127.0.0.1:3000/songs/${folder}`);
+        let response1 = await fetch(`/songs/${folder}`);
         let response = await response1.text();
         let div = document.createElement("div");
         div.innerHTML = response;
