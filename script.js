@@ -93,6 +93,7 @@ async function spotify() {
         let next = document.querySelector(".next")
 
         prev.addEventListener("click", () => {
+            currsong.pause();
             if ((curridx - 1) >= 0) {
                 curridx = curridx - 1
                 currsrc = `/songs/${folder}/` + allsongs[curridx].firstElementChild.lastElementChild.innerText
@@ -121,6 +122,7 @@ async function spotify() {
             currsong.pause();
         })
         next.addEventListener("click", () => {
+            currsong.pause();
             if ((curridx + 1) <= allsongs.length - 1) {
                 curridx = curridx + 1
                 currsrc = `/songs/${folder}/` + allsongs[curridx].firstElementChild.lastElementChild.innerText
