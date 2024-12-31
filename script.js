@@ -1,17 +1,15 @@
 async function spotify() {
     //fetching albums
     async function album() {
-        let res = await fetch("./songs/")
-        let res1 = await res.text()
-        let div = document.createElement("div");
-        div.innerHTML = res1;
-        let albums = [];
-        Array.from(div.getElementsByTagName("a")).forEach(async element => {
-            if (element.href.includes("/songs/")) {
-                albums.push(element.innerText.slice(0, (element.innerText.length - 1)))
-                let res = await fetch(`./songs/${element.innerText.slice(0, (element.innerText.length - 1))}/info.json`)
-                let res1 = await res.json()
-                document.querySelector(".CardContainer").innerHTML += ` <div data-folder="${element.innerText.slice(0, (element.innerText.length - 1))}" class="card1" style="background-color: rgb(33, 31, 31);">
+        let res = await fetch("/songs/info.json");
+        let res1 = await res.json()
+        console.log(res1);
+        let albums = res1.data;
+        console.log(albums)
+        albums.forEach(async element => {
+            let res = await fetch(`/songs/${element}/info.json`)
+            let res1 = await res.json()
+            document.querySelector(".CardContainer").innerHTML += ` <div data-folder="${element}" class="card1" style="background-color: rgb(33, 31, 31);">
             <div class="imgplay">
                 <img src=${res1.image} class="image"
                     alt="dinner with  friends">
@@ -28,7 +26,6 @@ async function spotify() {
             <p>${res1.description}</p>
             </div>
         </div>`
-            }
         });
     }
     await album()
@@ -45,11 +42,10 @@ async function spotify() {
     }
 
     async function main(folder) {
-        let response1 = await fetch(`./songs/${folder}`);
-        let response = await response1.text();
-        let div = document.createElement("div");
-        div.innerHTML = response;
-        let as = div.getElementsByTagName('a');
+        let response1 = await fetch(`/songs/${folder}/info.json`);
+        let response = await response1.json();
+        console.log(response);
+        let as = response.data;
         let SongList = document.getElementById("SongList");
         let ul = SongList.firstElementChild;
         ul.innerHTML = ""
@@ -59,11 +55,10 @@ async function spotify() {
         //making the list of all the songs and presenting then in library section
         for (let i = 0; i < as.length; i++) {
             const element = as[i];
-            if (element.href.endsWith(".mp3")) {
-                songs.push(element.href)
-                ul.innerHTML = ul.innerHTML + `<li class="Songs">
+            songs.push(`${window.location.origin}//songs//${folder}//${element}`)
+            ul.innerHTML = ul.innerHTML + `<li class="Songs">
             <div class="flex row song"><img src="music.svg" alt="music">
-                <p class="SongName" class="flex align_center">${element.innerText}</p></div>
+                <p class="SongName" class="flex align_center">${element}</p></div>
             <div class="ply">
                 <div class="play1 flex justify_center align_center">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="black" xmlns="http://www.w3.org/2000/svg">
@@ -74,16 +69,15 @@ async function spotify() {
              </div>
             </div>
         </li>`
-            }
         }
-
+        console.log("Songs: ",songs);
 
         //attaching event listener to every song
         let curridx = 0;
         let allsongs = Array.from(document.querySelectorAll(".Songs"))
         allsongs.forEach(e => {
             e.addEventListener("click", element => {
-                currsrc = `./songs/${folder}/` + e.firstElementChild.lastElementChild.innerText
+                currsrc = `/songs/${folder}/` + e.firstElementChild.lastElementChild.innerText
                 playsong(currsrc)
                 playbtn.style.display = "none";
                 pausebtn.style.display = "flex";
@@ -101,18 +95,18 @@ async function spotify() {
         prev.addEventListener("click", () => {
             if ((curridx - 1) >= 0) {
                 curridx = curridx - 1
-                currsrc = `./songs/${folder}/` + allsongs[curridx].firstElementChild.lastElementChild.innerText
+                currsrc = `/songs/${folder}/` + allsongs[curridx].firstElementChild.lastElementChild.innerText
                 playsong(currsrc)
             }
             else {
                 curridx = allsongs.length - 1
-                currsrc = `./songs/${folder}/` + allsongs[curridx].firstElementChild.lastElementChild.innerText
+                currsrc = `/songs/${folder}/` + allsongs[curridx].firstElementChild.lastElementChild.innerText
                 playsong(currsrc)
             }
         })
         playbtn.addEventListener("click", () => {
             if (currsrc == "") {
-                currsrc = currsrc = `./songs/${folder}/Daaru Party.mp3`;
+                currsrc = currsrc = `/songs/${folder}/Daaru Party.mp3`;
                 playsong(currsrc)
             }
             else {
@@ -129,12 +123,12 @@ async function spotify() {
         next.addEventListener("click", () => {
             if ((curridx + 1) <= allsongs.length - 1) {
                 curridx = curridx + 1
-                currsrc = `./songs/${folder}/` + allsongs[curridx].firstElementChild.lastElementChild.innerText
+                currsrc = `/songs/${folder}/` + allsongs[curridx].firstElementChild.lastElementChild.innerText
                 playsong(currsrc)
             }
             else {
                 curridx = 0;
-                currsrc = `./songs/${folder}/` + allsongs[curridx].firstElementChild.lastElementChild.innerText
+                currsrc = `/songs/${folder}/` + allsongs[curridx].firstElementChild.lastElementChild.innerText
                 playsong(currsrc)
             }
         })
@@ -193,7 +187,7 @@ async function spotify() {
         Array.from(document.querySelectorAll(".card1")).forEach(element => {
             element.addEventListener("click", async (e) => {
                 await main(e.currentTarget.dataset.folder)
-                document.querySelector(".left").style.left="0%";
+                document.querySelector(".left").style.left = "0%";
             })
         });
     }
