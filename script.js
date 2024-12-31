@@ -193,6 +193,6 @@ async function spotify() {
             })
         });
     }
-    await loadSongs()
+    loadSongs()
 }
 spotify()
