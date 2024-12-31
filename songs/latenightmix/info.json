@@ -1,5 +1,15 @@
 {
     "title":  "Late Night Mix",
     "description": "Songs to listen at Night",
-    "image":"/songs/latenightmix/cover.jpeg"
+    "image":"/songs/latenightmix/cover.jpeg",
+    "data":[
+        "Aaj Jane Ki Zid Na Karo.mp3",
+        "Ae Dil Hai Mushkil.mp3",
+        "Bekhayali.mp3",
+        "Bulleya.mp3",
+        "Channa Mereya.mp3",
+        "Kaise Hua.mp3",
+        "Mere Sohneya.mp3",
+        "Teri Jhuki Nazar.mp3"
+    ]
 }

@@ -1,5 +1,12 @@
 {
     "title":  "Taylor Swift",
     "description": "Artist",
-    "image":"/songs/Taylorswift/cover.jpeg"
+    "image":"/songs/Taylorswift/cover.jpeg",
+    "data" : [
+        "Blank Space.mp3",
+        "Delicate.mp3",
+        "Fearless.mp3",
+        "Love Story.mp3",
+        "Lover.mp3"
+    ]
 }

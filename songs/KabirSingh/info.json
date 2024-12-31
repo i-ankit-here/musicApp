@@ -1,5 +1,12 @@
 {
     "title":  "Kabir Singh",
     "description": "Album",
-    "image":"/songs/KabirSingh/cover.jpeg"
+    "image":"/songs/KabirSingh/cover.jpeg",
+    "data":[
+        "Bekhayali.mp3",
+        "Kaise Hua.mp3",
+        "Mere Sohneya.mp3",
+        "Tera Ban Jaunga.mp3",
+        "Tujhe Kitna Chahne Lage.mp3"
+    ]
 }

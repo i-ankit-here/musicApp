@@ -1,5 +1,16 @@
 {
     "title":  "Arijit Singh",
     "description": "Artist",
-    "image":"/songs/ArijitSingh/cover.jpeg"
+    "image":"/songs/ArijitSingh/cover.jpeg",
+    "data":[
+        "Chaleya.mp3",
+        "Chedkhaniyaan.mp3",
+        "Ek Baar Hi Kiya Toh Yaaron Pyaar Kya Kiya.mp3",
+        "Heeriye.mp3",
+        "Kesariya Tera.mp3",
+        "Mast Magan (Lofi).mp3",
+        "Phir Aur Kya Chahiye.mp3",
+        "Satranga.mp3",
+        "Uska Hi Banana (Lofi).mp3"
+    ]
 }

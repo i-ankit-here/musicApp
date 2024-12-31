@@ -1,5 +1,15 @@
 {
     "title":  "English Songs",
     "description": "Must listen english Songs",
-    "image":"https://i.scdn.co/image/ab67706f00000002a98e80d2fc9b1cf3b80c4481"
+    "image":"https://i.scdn.co/image/ab67706f00000002a98e80d2fc9b1cf3b80c4481",
+    "data":[
+        "closer.mp3",
+        "Delicate.mp3",
+        "dont let me down.mp3",
+        "Fearless.mp3",
+        "let me down slowly.mp3",
+        "Lover.mp3",
+        "mood.mp3",
+        "perfect.mp3"
+    ]
 }

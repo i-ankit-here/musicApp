@@ -1,5 +1,12 @@
 {
     "title":  "Selena Gomez",
     "description": "Artist",
-    "image":"/songs/Selenagomez/cover.jpeg"
+    "image":"/songs/Selenagomez/cover.jpeg",
+    "data":[
+        "Calm Down.mp3",
+        "Fetish.mp3",
+        "I Cant Get Enough.mp3",
+        "It Aint Me.mp3",
+        "Wolves.mp3"
+    ]
 }

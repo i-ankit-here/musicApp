@@ -1,5 +1,14 @@
 {
     "title":  "Ae dil hai mushkil",
     "description": "Album",
-    "image":"/songs/ae_dil_h_mushkil/cover.jpeg"
+    "image":"/songs/ae_dil_h_mushkil/cover.jpeg",
+    "data":[
+        "Aaj Jane Ki Zid Na Karo.mp3",
+        "Ae Dil Hai Mushkil.mp3",
+        "Alizeh.mp3",
+        "Bulleya.mp3",
+        "Channa Mereya.mp3",
+        "Cutiepie.mp3",
+        "The Breakup Song.mp3"
+    ]
 }

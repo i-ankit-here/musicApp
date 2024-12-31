@@ -1,5 +1,12 @@
 {
     "title":  "Party Songs",
     "description": "Mst music h bhai suno to...",
-    "image":"https://i.scdn.co/image/ab67706f000000026e515187c071e45918e9f0de"
+    "image":"https://i.scdn.co/image/ab67706f000000026e515187c071e45918e9f0de",
+    "data":[
+        "Daaru Party.mp3",
+        "Let's Nacho.mp3",
+        "Make Some Noise For Desi Boyz.mp3",
+        "Nachi Nachi.mp3",
+        "Tu Mera Hero (128 kbps).mp3"
+    ]
 }

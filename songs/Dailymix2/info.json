@@ -1,5 +1,15 @@
 {
     "title":  "Daily mix 2",
     "description": "Your Daily mix is here",
-    "image":"/songs/Dailymix2/cover.jpeg"
+    "image":"/songs/Dailymix2/cover.jpeg",
+    "data":[
+        "Alizeh.mp3",
+        "Angreji Beat.mp3",
+        "Brown Rang.mp3",
+        "Bulleya.mp3",
+        "Channa Mereya.mp3",
+        "Cutiepie.mp3",
+        "Get Up Jawani.mp3",
+        "The Breakup Song.mp3"
+    ]
 }

@@ -1,5 +1,13 @@
 {
     "title":  "Daily mix 3",
     "description": "Your Daily mix is here",
-    "image":"/songs/Dailymix3/cover.jpeg"
+    "image":"/songs/Dailymix3/cover.jpeg",
+    "data":[
+        "Calm Down.mp3",
+        "Delicate.mp3",
+        "Fearless.mp3",
+        "Fetish.mp3",
+        "Lover.mp3",
+        "Wolves.mp3"
+    ]
 }

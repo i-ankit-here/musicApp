@@ -1,5 +1,13 @@
 {
     "title":  "International Villager",
     "description": "Yo Yo Honey Singh",
-    "image":"/songs/internationalVillager/cover.jpeg"
+    "image":"/songs/internationalVillager/cover.jpeg",
+    "data":[
+        "Angreji Beat.mp3",
+        "Brown Rang.mp3",
+        "Dope Shope.mp3",
+        "Garaari.mp3",
+        "Get Up Jawani.mp3",
+        "Mujh%20Ko Jaane Do.mp3"
+    ]
 }

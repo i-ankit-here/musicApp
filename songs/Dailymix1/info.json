@@ -1,5 +1,15 @@
 {
     "title":  "Daily mix 1",
     "description": "Your Daily mix is here",
-    "image":"/songs/Dailymix1/cover.jpeg"
+    "image":"/songs/Dailymix1/cover.jpeg",
+    "data":[
+        "Ae Dil Hai Mushkil.mp3",
+        "Bekhayali.mp3",
+        "Chaleya.mp3",
+        "Kaise Hua.mp3",
+        "Kesariya Tera.mp3",
+        "Mast Magan (Lofi).mp3",
+        "Mere Sohneya.mp3",
+        "Teri Jhuki Nazar.mp3"
+    ]
 }
